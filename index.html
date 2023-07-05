@@ -1542,18 +1542,18 @@ void main () {
         <h1>Contact Us</h1>
 
 
-        <form action="" method="post" name="google-sheet" class="form">
+        <form action="" method="post" name="google-sheet1" class="form">
             <div class="input_group">
                 <label>Name:</label><br>
                 <input type="text" name="Name" class="input">
             </div>
             <div class="input_group">
                 <label>Email ID:</label><br>
-                <input type="text" name="Email" class="input">
+                <input type="email" name="Email" class="input">
             </div>
             <div class="input_group">
                 <label>Mobile number:</label><br>
-                <input type="text" name="Phone" class="input">
+                <input type="number" name="Phone" class="input">
             </div>
             <!-- <div class="input_group">
                 <input type="text" name="name" class="input">
@@ -1600,8 +1600,8 @@ void main () {
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form method="POST"
-                        action=""
+                    <form method="post" action=""
+                        
                         autocomplete="off" name="google-sheet" class="form">
                         <div class="input_group">
                             <label>Name:</label><br>
@@ -1633,6 +1633,18 @@ void main () {
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxduRpewfGCHHPlya6_qSBvCCl1GqAdC4oj1VxHWtJ7vwVjO4hUsjjFaVthGBwuJg09/exec'
         const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        const scriptURL1 = 'https://script.google.com/macros/s/AKfycbxduRpewfGCHHPlya6_qSBvCCl1GqAdC4oj1VxHWtJ7vwVjO4hUsjjFaVthGBwuJg09/exec'
+        const form1 = document.forms['google-sheet1']
 
         form.addEventListener('submit', e => {
             e.preventDefault()
