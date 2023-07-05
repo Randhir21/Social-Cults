@@ -87,6 +87,8 @@
     align-items: center;
     padding: 6px;
     cursor: pointer;
+    position: relative;
+    z-index: 11;
 }
 .card_cont_1{
     font-size: 25px;
@@ -146,6 +148,8 @@
 .form{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 11;
     /* flex-direction: column; */
 }
 .input{
@@ -302,5 +306,7 @@
         text-align: center;
         align-items: center;
         padding: 6px;
+        position: relative;
+        z-index: 11;
     }
   }
