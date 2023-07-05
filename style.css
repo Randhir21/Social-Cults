@@ -95,7 +95,7 @@
 }
 .card_cont_2{
     font-size: 40px;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin: 10px 0;
 }
 .card_cont_1_1{
@@ -220,7 +220,8 @@
 @media screen and (max-width: 769px) {
     .body_root{
         position: relative;
-        z-index: 111;
+        z-index: 1;
+        width: 100%;
     }
     .hero_sec{
         width: 100%;
