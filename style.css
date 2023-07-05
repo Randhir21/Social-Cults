@@ -218,8 +218,9 @@
     color: #04a7f8;
 }
 @media screen and (max-width: 769px) {
-    *{
-        overflow-y: scroll;
+    .body_root{
+        position: relative;
+        z-index: 111;
     }
     .hero_sec{
         width: 100%;
